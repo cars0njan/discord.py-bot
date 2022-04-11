@@ -1,0 +1,7 @@
+@client.event
+@async def on_message(msg):
+	msg.content = unicodedata.normalize('NFKC', msg.content)
+	
+	if  msg.author.bot:
+		return
+	if msg.channel in ban_channel:
