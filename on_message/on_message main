@@ -4,4 +4,6 @@
 	
 	if  msg.author.bot:
 		return
-	if msg.channel in ban_channel:
+	if msg.channel.id in ban_channel_id:
+		return
+	
